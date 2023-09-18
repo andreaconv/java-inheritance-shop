@@ -27,24 +27,34 @@ public class Carrello {
 		switch(tipoProdotto) {
 		
 	    case 1:	    	
-	    	int imei = 0;
-	    	int memoria = 0;
-		
 			System.out.print("Inserire il codice IMIEI: ");
-			imei = sc.nextInt();
+			int imei = sc.nextInt();
 			System.out.print("Inserire la grandezza di memoria: ");
-			memoria = sc.nextInt();
+			int memoria = sc.nextInt();
 			
 			Smartphone telefono = new Smartphone(nome, marca, prezzo, iva, imei, memoria);
 			System.out.println(telefono);
 	        break;
 	        
-	    case 2:
-	    	System.out.println("Hai selezionato televisore");
+	    case 2:	    	
+	    	System.out.print("Inserire la dimensione in pollici: ");
+	    	int dimensione = sc.nextInt();
+			System.out.print("Digitare 'Y' se è una smart TV altrimenti 'N': ");
+			String smartTv = sc.next();
+			
+			Televisori televisore = new Televisori(nome, marca, prezzo, iva, dimensione, (smartTv.toLowerCase().equals("y") ? true : false));
+			System.out.println(televisore);
 	        break;
 	        
 	    case 3:
-	        System.out.println("Hai selezionato cuffie");
+	    	sc.nextLine();
+	    	System.out.print("Inserire il colore: ");
+	    	String colore = sc.nextLine();
+			System.out.print("Digitare 'Y' se sono wireless altrimenti 'N': ");
+			String isCablate = sc.nextLine();
+	    	
+			Cuffie cuffie = new Cuffie(nome, marca, prezzo, iva, colore, (isCablate.toLowerCase().equals("y") ? true : false));
+			System.out.println(cuffie);
 	        break;
 	        
 	    default: 
