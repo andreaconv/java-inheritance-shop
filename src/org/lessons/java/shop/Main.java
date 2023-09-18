@@ -1,6 +1,6 @@
 package org.lessons.java.shop;
 
-public class Prodotto {
+public class Main {
 	
 	private String codice;
 	private String nome;
@@ -8,9 +8,9 @@ public class Prodotto {
 	private float  prezzo;
 	private int iva;
 	
-	public Prodotto(String codice, String name, String marca, float prezzo, int iva) {
+	public Main(String codice, String name, String marca, float prezzo, int iva) {
 		
-		setCodice(codice);
+		this.codice = codice;
 		setNome(name);
 		setMarca(marca);
 		setPrezzo(prezzo);
@@ -22,9 +22,9 @@ public class Prodotto {
 	public String getCodice0() {
 		return codice;
 	}
-	public void setCodice(String codice) {
-		this.codice = codice;
-	}
+//	public void setCodice(String codice) {
+//		this.codice = codice;
+//	}
 	
 	//NOME
 	public String getNome() {
