@@ -57,4 +57,9 @@ public class Prodotto {
 	public void setIva(int iva) {
 		this.iva = iva;
 	}
+	
+	public float prezzoFormattato() {
+		return getPrezzo() + (getPrezzo() / 100 * getIva());
+
+	}
 }
