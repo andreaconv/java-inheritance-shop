@@ -6,9 +6,9 @@ public class Cuffie extends Prodotto {
 	private boolean isCablate;
 	
 	public Cuffie(
-			String codice, String nome, String marca, float prezzo, int iva,
+			String nome, String marca, float prezzo, int iva,
 			String colore, boolean isCablate) {
-		super (codice, nome, marca, prezzo, iva);
+		super (nome, marca, prezzo, iva);
 		setColore(colore);
 		
 	}
@@ -33,7 +33,7 @@ public class Cuffie extends Prodotto {
 	
 	@Override
 	public String toString() {
-		return "prodotto: " + getNome() + " | marca: " + getMarca() + " | prezzo senza IVA: € " + getPrezzo() 
+		return "nome prodotto: " + getNome() + " | marca: " + getMarca() + " | prezzo senza IVA: € " + getPrezzo() 
 		+ " | prezzo con IVA: € " + String.format("%.02f", prezzoFormattato())
 		+ " | colore: " + getColore() + " | wireless: " + (!isCablate() ? "Si" : "No");
 	}

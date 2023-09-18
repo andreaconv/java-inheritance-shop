@@ -6,9 +6,9 @@ public class Smartphone extends Prodotto {
 	private int memoria;
 	
 	public Smartphone(
-			String codice, String nome, String marca, float prezzo, int iva,
+			String nome, String marca, float prezzo, int iva,
 			int imei, int memoria) {
-		super (codice, nome, marca, prezzo, iva);
+		super (nome, marca, prezzo, iva);
 		setImei(imei);
 		setMemoria(memoria);
 	}
@@ -31,8 +31,8 @@ public class Smartphone extends Prodotto {
 	
 	@Override
 	public String toString() {
-		return "prodotto: " + getNome() + " | marca: " + getMarca() + " | prezzo senza IVA: € " + getPrezzo() 
+		return "nome prodotto: " + getNome() + " | marca: " + getMarca() + " | prezzo senza IVA: € " + getPrezzo() 
 		+ " | prezzo con IVA: € " + String.format("%.02f", prezzoFormattato())
-		+ " | IMEI: " + getImei() + " | memoria " + getMemoria() + " GB";
+		+ " | codice IMEI: " + getImei() + " | memoria " + getMemoria() + " GB";
 	}
 }

@@ -8,9 +8,8 @@ public class Prodotto {
 	private float prezzo;
 	private int iva;
 	
-	public Prodotto(String codice, String nome, String marca, float prezzo, int iva) {
+	public Prodotto(String nome, String marca, float prezzo, int iva) {
 		
-		this.codice = codice;
 		setNome(nome);
 		setMarca(marca);
 		setPrezzo(prezzo);
@@ -65,7 +64,7 @@ public class Prodotto {
 	
 	@Override
 	public String toString() {
-		return "prodotto: " + getNome() + " | marca: " + getMarca() + " | prezzo senza IVA: € " + getPrezzo() 
+		return "nome prodotto: " + getNome() + " | marca: " + getMarca() + " | prezzo senza IVA: € " + getPrezzo() 
 		+ " | prezzo con IVA: € " + String.format("%.02f", prezzoFormattato());
 	}
 }

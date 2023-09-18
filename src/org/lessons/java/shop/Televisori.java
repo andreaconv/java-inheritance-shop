@@ -6,9 +6,9 @@ public class Televisori extends Prodotto {
 	private boolean smartTv;
 	
 	public Televisori(
-			String codice, String nome, String marca, float prezzo, int iva,
+			String nome, String marca, float prezzo, int iva,
 			int dimensione, boolean smartTv) {
-		super (codice, nome, marca, prezzo, iva);
+		super (nome, marca, prezzo, iva);
 		setDimensione(dimensione);
 		setSmartTv(smartTv);
 		
@@ -36,7 +36,7 @@ public class Televisori extends Prodotto {
 	
 	@Override
 	public String toString() {
-		return "prodotto: " + getNome() + " | marca: " + getMarca() + " | prezzo senza IVA: € " + getPrezzo() 
+		return "nome prodotto: " + getNome() + " | marca: " + getMarca() + " | prezzo senza IVA: € " + getPrezzo() 
 		+ " | prezzo con IVA: € " + String.format("%.02f", prezzoFormattato())
 		+ " | dimensioni: " + getDimensione() + " pollici" + " | smart TV: " + (isSmartTv() ? "Si" : "No");
 	}
